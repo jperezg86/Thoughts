@@ -17,6 +17,7 @@ Route::get('/', function () {
 });
 
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::apiResource('api/thoughts', 'API\ThoughtsController');
